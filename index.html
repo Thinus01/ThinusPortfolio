@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Colorful Glass Portfolio</title>
+  <title>Thinus Van De Venter</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
@@ -20,17 +20,17 @@
       overflow: auto;
     }
 
-body {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.4) transparent;
-}
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.4) transparent;
+    }
 
-main {
-  height: 100vh;
-  overflow-y: overlay; /* ✅ Make scrollbar overlay */
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
+    main {
+      height: 100vh;
+      overflow-y: overlay;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
 
     section {
       height: 100vh;
@@ -75,14 +75,14 @@ main {
       perspective: 1000px;
     }
 
-.image-inner {
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.1s ease;
-  will-change: transform;
-  width: fit-content; /* ✅ restrict to image */
-  max-width: 100%;
-}
+    .image-inner {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease;
+      will-change: transform;
+      width: fit-content;
+      max-width: 100%;
+    }
 
     .image-inner img {
       width: 100%;
@@ -92,26 +92,26 @@ main {
       display: block;
     }
 
-      .glare {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        border-radius: 16px;
-        background: linear-gradient(135deg,
-          rgba(255, 0, 255, 0.3),
-          rgba(0, 255, 255, 0.3),
-          rgba(255, 255, 0, 0.3),
-          rgba(255, 0, 255, 0.3)
-        );
-        mask-image: radial-gradient(circle at center, transparent 60px, black 100px);
-        mask-composite: exclude;
-        opacity: 0.1;
-        transition: opacity 0.3s;
-        overflow: hidden;
-      }
+    .glare {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border-radius: 16px;
+      background: linear-gradient(135deg,
+        rgba(255, 0, 255, 0.3),
+        rgba(0, 255, 255, 0.3),
+        rgba(255, 255, 0, 0.3),
+        rgba(255, 0, 255, 0.3)
+      );
+      mask-image: radial-gradient(circle at center, transparent 60px, black 100px);
+      mask-composite: exclude;
+      opacity: 0.1;
+      transition: opacity 0.3s;
+      overflow: hidden;
+    }
 
     .image:hover .glare {
       opacity: 0.3;
@@ -180,68 +180,68 @@ main {
       color: inherit;
     }
 
-      .project button {
-        display: block;
-        margin: 1rem auto 0 auto;
-        width: 100%;
-        padding: 0.5rem 1.5rem;
-        border: none;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background 0.3s, transform 0.2s;
-      }
+    .project button {
+      display: block;
+      margin: 1rem auto 0 auto;
+      width: 100%;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
 
-      .project button:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: scale(1.05);
-      }
+    .project button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
 
-      #popup {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 200;
-        align-items: center;
-        justify-content: center;
-      }
+    #popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+    }
 
-      .popup-header {
-        display: flex;
-        justify-content: flex-end;
-      }
+    .popup-header {
+      display: flex;
+      justify-content: flex-end;
+    }
 
-      #popup > div {
-        position: relative;
-        background: white;
-        color: black;
-        padding: 1rem 2rem 2rem 2rem;
-        border-radius: 12px;
-        width: 90%;
-        max-width: 700px;
-        max-height: 90%;
-        overflow-y: auto;
-      }
+    #popup > div {
+      position: relative;
+      background: white;
+      color: black;
+      padding: 1rem 2rem 2rem 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 90%;
+      overflow-y: auto;
+    }
 
-      #popup button.close-btn {
-        background: none;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-        z-index: 9999;
-      }
+    #popup button.close-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 9999;
+    }
 
-      #popup img {
-        width: 90%;
-        border-radius: 12px;
-        margin-bottom: 1rem;
-      }
+    #popup img {
+      width: 90%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
 
     .project:hover {
       transform: scale(1.05);
@@ -302,150 +302,145 @@ main {
       width: 8px;
     }
 
-    ::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.4);
-      border-radius: 4px;
+    .project-slider-buttons button {
+      display: none;
     }
 
-      .project-slider-buttons button {
+    @media (max-width: 768px) {
+      #popup {
         display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 200;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
       }
-@media (max-width: 768px) {
-#popup {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 200;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
 
-.popup-inner {
-  background: white;
-  color: black;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 700px;
-  max-height: 85vh !important;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
+      .popup-inner {
+        background: white;
+        color: black;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 700px;
+        max-height: 85vh !important;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
 
-.popup-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: white;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: flex-end;
-}
+      .popup-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: white;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: flex-end;
+      }
 
-.close-btn {
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
-  color: #333 !important;
-  font-size: 1.75rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-  top: 3rem !important;
-  right: 2rem !important;
-}
+      .close-btn {
+        background: rgba(0, 0, 0, 0.1);
+        border: none;
+        color: #333 !important;
+        font-size: 1.75rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+        top: 3rem !important;
+        right: 2rem !important;
+      }
 
-.close-btn:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
+      .close-btn:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
 
-.popup-content {
-  padding: 1rem 1.5rem;
-  overflow-y: auto;
-}
+      .popup-content {
+        padding: 1rem 1.5rem;
+        overflow-y: auto;
+      }
 
-.popup-content img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
+      .popup-content img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+      }
 
+      section .content {
+        flex-direction: column !important;
+        text-align: center !important;
+      }
 
-  section .content {
-    flex-direction: column !important;
-    text-align: center !important;
-  }
-  nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 2rem);
-    max-width: 400px;
-    z-index: 999;
-  }
+      nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+        position: fixed;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 2rem);
+        max-width: 400px;
+        z-index: 999;
+      }
+    
+      .content {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .text {
+        width: 100%;
+        max-width: 100%;
+      }
+    
+      .image {
+        width: 80%;
+        max-width: 100%;
+        order: 2;
+        margin-top: 1rem;
+      }
+    
+      h1 {
+        font-size: 2rem;
+      }
+    
+      h2 {
+        font-size: 1.5rem;
+      }
+    
+      p {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+      }
+    
+      .projects {
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 1rem 0;
+      }
 
-  .content {
-    flex-direction: column;
-    text-align: center;
-  }
+      .project {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .text {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .image {
-    width: 80%;
-    max-width: 100%;
-    order: 2;
-    margin-top: 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-    padding: 0 1rem;
-  }
-
-.projects {
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding: 1rem 0;
-}
-
-.project {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-  .project img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+      .project img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
 
       .project-slider-buttons {
         display: flex;
@@ -453,7 +448,7 @@ main {
         width: 100%;
         margin-top: 1rem;
       }
-
+    
       .project-slider-buttons button {
         flex: 0 0 30%;
         margin: 0 5%;
@@ -467,61 +462,66 @@ main {
         backdrop-filter: blur(5px);
         display: block;
       }
-
+        
       .projects-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
+        
+      #popup > div {
+        width: 95%;
+        max-height: 90vh;
+        padding: 1rem;
+      }
+    
+      #popup img {
+        width: 100%;
+      }
+    
+      .contact-links a {
+        justify-content: center;
+        font-size: 1rem;
+      }
+    
+      section {
+        padding: 1.5rem 1rem;
+      }
+    
+      .hide-mobile {
+        display: none;
+      }
+    }
 
-  #popup > div {
-    width: 95%;
-    max-height: 90vh;
-    padding: 1rem;
-  }
+    @media (min-width: 769px) {
+      .image {
+        order: unset;
+      }
+    
+      section:nth-of-type(even) .content {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+    
+      section:nth-of-type(odd) .content {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
 
-  #popup img {
-    width: 100%;
-  }
-
-  .contact-links a {
-    justify-content: center;
-    font-size: 1rem;
-  }
-
-  section {
-    padding: 1.5rem 1rem;
-  }
-
-  .hide-mobile {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .image {
-    order: unset;
-  }
-
-  section:nth-of-type(even) .content {
-    flex-direction: row-reverse;
-    text-align: right;
-  }
-
-  section:nth-of-type(odd) .content {
-    flex-direction: row;
-    text-align: left;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 4px;
-}
+    main {
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: #fff #00000075;
+    }
+    
+    main::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    main::-webkit-scrollbar-track {
+      background: #222;
+    }
 
   </style>
 </head>
